@@ -35,7 +35,6 @@ server.get('/veiculo/:placa', async (req, res) => {
 })
 
 server.post('/veiculo', async (req, res) => {
-
     if (await consultarVeiculo(req.body.placa)) {
         res.status(500).json("veiculo ja cadastrado")
     } else {
